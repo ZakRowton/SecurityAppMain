@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Storage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cameras>
+    <Camera>
+      <Name>Front Porch Camera</Name>
+      <IPAddress>192.168.0.233</IPAddress>
+      <WyzeUsername>zak1206</WyzeUsername>
+      <WyzePassword>rags1206</WyzePassword>
+      <PlaySound>false</PlaySound>
+      <Visible>true</Visible>
+    </Camera>
+  </Cameras>
+  <DoorSensors>
+    <DoorSensor>
+      <SensorName>Available Sensor 1</SensorName>
+      <IPAddress>192.168.0.101</IPAddress>
+      <RoomID>Living Room</RoomID>
+    </DoorSensor>
+  </DoorSensors>
+</Storage>
