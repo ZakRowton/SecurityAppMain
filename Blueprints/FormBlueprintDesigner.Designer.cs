@@ -42,10 +42,9 @@
             // 
             pbSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pbSave.Image = Properties.Resources.save;
-            pbSave.Location = new Point(1321, 819);
-            pbSave.Margin = new Padding(3, 4, 3, 4);
+            pbSave.Location = new Point(1156, 614);
             pbSave.Name = "pbSave";
-            pbSave.Size = new Size(79, 71);
+            pbSave.Size = new Size(69, 53);
             pbSave.SizeMode = PictureBoxSizeMode.StretchImage;
             pbSave.TabIndex = 0;
             pbSave.TabStop = false;
@@ -59,28 +58,25 @@
             panel1.Controls.Add(buttonNewSensor);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(buttonAddCam);
-            panel1.Location = new Point(10, 12);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(9, 9);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1393, 85);
+            panel1.Size = new Size(1219, 64);
             panel1.TabIndex = 1;
             // 
             // comboBoxSensors
             // 
             comboBoxSensors.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxSensors.FormattingEnabled = true;
-            comboBoxSensors.Location = new Point(507, 23);
-            comboBoxSensors.Margin = new Padding(3, 4, 3, 4);
+            comboBoxSensors.Location = new Point(444, 17);
             comboBoxSensors.Name = "comboBoxSensors";
-            comboBoxSensors.Size = new Size(286, 36);
+            comboBoxSensors.Size = new Size(251, 29);
             comboBoxSensors.TabIndex = 3;
             // 
             // buttonNewSensor
             // 
-            buttonNewSensor.Location = new Point(801, 23);
-            buttonNewSensor.Margin = new Padding(3, 4, 3, 4);
+            buttonNewSensor.Location = new Point(701, 17);
             buttonNewSensor.Name = "buttonNewSensor";
-            buttonNewSensor.Size = new Size(153, 40);
+            buttonNewSensor.Size = new Size(134, 30);
             buttonNewSensor.TabIndex = 2;
             buttonNewSensor.Text = "New Sensor";
             buttonNewSensor.UseVisualStyleBackColor = true;
@@ -90,18 +86,16 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(27, 21);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(24, 16);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(286, 36);
+            comboBox1.Size = new Size(251, 29);
             comboBox1.TabIndex = 1;
             // 
             // buttonAddCam
             // 
-            buttonAddCam.Location = new Point(321, 21);
-            buttonAddCam.Margin = new Padding(3, 4, 3, 4);
+            buttonAddCam.Location = new Point(281, 16);
             buttonAddCam.Name = "buttonAddCam";
-            buttonAddCam.Size = new Size(153, 40);
+            buttonAddCam.Size = new Size(134, 30);
             buttonAddCam.TabIndex = 0;
             buttonAddCam.Text = "New Camera";
             buttonAddCam.UseVisualStyleBackColor = true;
@@ -109,15 +103,17 @@
             // 
             // FormBlueprintDesigner
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.FromArgb(64, 64, 64);
+            BackgroundImage = Properties.Resources.blueprint2;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1414, 905);
+            ClientSize = new Size(1237, 679);
             Controls.Add(panel1);
             Controls.Add(pbSave);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormBlueprintDesigner";
             Text = "FormBlueprintDesigner";
             Load += FormBlueprintDesigner_Load;

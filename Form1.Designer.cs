@@ -93,8 +93,10 @@ namespace Security
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
+            pbExit = new PictureBox();
             panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbExit).BeginInit();
             SuspendLayout();
             // 
             // animationTimer
@@ -112,19 +114,17 @@ namespace Security
             panelNav.Controls.Add(lblSensorStatus);
             panelNav.Controls.Add(buttonSettings);
             panelNav.Controls.Add(buttonBlueprint);
-            panelNav.Location = new Point(0, 0);
-            panelNav.Margin = new Padding(3, 4, 3, 4);
+            panelNav.Location = new Point(3, 4);
             panelNav.Name = "panelNav";
-            panelNav.Size = new Size(10, 1077);
+            panelNav.Size = new Size(10, 682);
             panelNav.TabIndex = 2;
             // 
             // buttonSetting
             // 
             buttonSetting.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonSetting.Location = new Point(32, 389);
-            buttonSetting.Margin = new Padding(3, 4, 3, 4);
+            buttonSetting.Location = new Point(28, 292);
             buttonSetting.Name = "buttonSetting";
-            buttonSetting.Size = new Size(167, 45);
+            buttonSetting.Size = new Size(146, 34);
             buttonSetting.TabIndex = 3;
             buttonSetting.Text = "Settings";
             buttonSetting.UseVisualStyleBackColor = true;
@@ -133,19 +133,18 @@ namespace Security
             // lblSensorStatus
             // 
             lblSensorStatus.AutoSize = true;
-            lblSensorStatus.Location = new Point(40, 704);
+            lblSensorStatus.Location = new Point(35, 528);
             lblSensorStatus.Name = "lblSensorStatus";
-            lblSensorStatus.Size = new Size(50, 20);
+            lblSensorStatus.Size = new Size(38, 15);
             lblSensorStatus.TabIndex = 2;
             lblSensorStatus.Text = "label1";
             // 
             // buttonSettings
             // 
             buttonSettings.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonSettings.Location = new Point(32, 229);
-            buttonSettings.Margin = new Padding(3, 4, 3, 4);
+            buttonSettings.Location = new Point(28, 172);
             buttonSettings.Name = "buttonSettings";
-            buttonSettings.Size = new Size(167, 45);
+            buttonSettings.Size = new Size(146, 34);
             buttonSettings.TabIndex = 1;
             buttonSettings.Text = "Designer";
             buttonSettings.UseVisualStyleBackColor = true;
@@ -154,10 +153,9 @@ namespace Security
             // buttonBlueprint
             // 
             buttonBlueprint.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonBlueprint.Location = new Point(32, 92);
-            buttonBlueprint.Margin = new Padding(3, 4, 3, 4);
+            buttonBlueprint.Location = new Point(28, 69);
             buttonBlueprint.Name = "buttonBlueprint";
-            buttonBlueprint.Size = new Size(167, 45);
+            buttonBlueprint.Size = new Size(146, 34);
             buttonBlueprint.TabIndex = 0;
             buttonBlueprint.Text = "Blueprint";
             buttonBlueprint.UseVisualStyleBackColor = true;
@@ -167,10 +165,9 @@ namespace Security
             // 
             pictureBox1.BackColor = Color.FromArgb(64, 64, 64);
             pictureBox1.Image = Properties.Resources.Menu;
-            pictureBox1.Location = new Point(16, 7);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(15, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 47);
+            pictureBox1.Size = new Size(25, 25);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -179,28 +176,42 @@ namespace Security
             // 
             // panelMain
             // 
-            panelMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panelMain.Location = new Point(368, 7);
-            panelMain.Margin = new Padding(3, 4, 3, 4);
+            panelMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelMain.Location = new Point(52, 5);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1432, 1063);
+            panelMain.Size = new Size(1247, 679);
             panelMain.TabIndex = 7;
+            // 
+            // pbExit
+            // 
+            pbExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pbExit.BackColor = Color.FromArgb(64, 64, 64);
+            pbExit.Image = Properties.Resources.exit;
+            pbExit.Location = new Point(1261, 14);
+            pbExit.Name = "pbExit";
+            pbExit.Size = new Size(37, 35);
+            pbExit.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbExit.TabIndex = 8;
+            pbExit.TabStop = false;
+            pbExit.Click += pbExit_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(1803, 1077);
+            ClientSize = new Size(1312, 690);
+            Controls.Add(pbExit);
             Controls.Add(pictureBox1);
             Controls.Add(panelNav);
             Controls.Add(panelMain);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Opacity = 0.9D;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             DoubleClick += Form1_DoubleClick;
             MouseDoubleClick += Form1_MouseDoubleClick;
@@ -210,6 +221,7 @@ namespace Security
             panelNav.ResumeLayout(false);
             panelNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbExit).EndInit();
             ResumeLayout(false);
             // -----------------------------------------
         }
@@ -407,6 +419,7 @@ namespace Security
         private System.Windows.Forms.Timer timer1;
         private Label lblSensorStatus;
         private Button buttonSetting;
+        private PictureBox pbExit;
         // -------------------------------------------------------------------
 
     } // End partial class Form1

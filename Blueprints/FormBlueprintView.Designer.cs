@@ -231,6 +231,8 @@ namespace Security
             Controls.Add(panelSmartThings);
             Controls.Add(panelCam);
             FormBorderStyle = FormBorderStyle.None;
+            BackgroundImage = Properties.Resources.blueprint2;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Name = "FormBlueprintView";
             Text = "FormBlueprintView";
             Load += FormBlueprintView_Load;

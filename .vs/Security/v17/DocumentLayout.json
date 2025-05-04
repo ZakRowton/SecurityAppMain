@@ -1,70 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\",
+  "WorkspaceRootPath": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\settings\\formsettingscameras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:settings\\formsettingscameras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\blueprints\\formblueprintview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\blueprints\\blueprintdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\blueprintdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\settings\\formsettingscameras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:settings\\formsettingscameras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:settings\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:Settings\\FormSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\sensors\\doorsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintdesigner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\blueprints\\blueprintdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\blueprintdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\sensors\\doorsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:sensors\\doorsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\sensors\\sensorscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\sensors\\sensorscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:sensors\\sensorscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\sensors\\esp32controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\securityappmain\\sensors\\esp32controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:sensors\\esp32controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|c:\\users\\zakrowton\\onedrive - concierge benefit services, llc\\desktop\\security\\blueprints\\formblueprintview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CEAAF20-B953-4456-8360-03BA7233FC27}|Security.csproj|solutionrelative:blueprints\\formblueprintview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,47 +82,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormSettingsCameras.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettingsCameras.cs",
-              "RelativeDocumentMoniker": "Settings\\FormSettingsCameras.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettingsCameras.cs [Design]",
-              "RelativeToolTip": "Settings\\FormSettingsCameras.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "FormBlueprintDesigner.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintDesigner.cs",
+              "RelativeDocumentMoniker": "Blueprints\\FormBlueprintDesigner.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintDesigner.cs [Design]",
+              "RelativeToolTip": "Blueprints\\FormBlueprintDesigner.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T23:43:13.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormSettings.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettings.cs",
-              "RelativeDocumentMoniker": "Settings\\FormSettings.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettings.cs",
-              "RelativeToolTip": "Settings\\FormSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T23:42:44.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormSettings.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettings.cs",
-              "RelativeDocumentMoniker": "Settings\\FormSettings.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettings.cs [Design]",
-              "RelativeToolTip": "Settings\\FormSettings.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T23:38:30.209Z",
+              "WhenOpened": "2025-05-04T02:39:42.181Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T02:26:27.415Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Storage.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Storage.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Storage.cs",
               "RelativeDocumentMoniker": "Storage.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Storage.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Storage.cs",
               "RelativeToolTip": "Storage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -130,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAwwPoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAKACAAAAAAAAAAAjwLMCAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T22:23:29.388Z",
               "EditorCaption": ""
@@ -145,9 +133,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "FormBlueprintView.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintView.cs",
               "RelativeDocumentMoniker": "Blueprints\\FormBlueprintView.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintView.cs",
               "RelativeToolTip": "Blueprints\\FormBlueprintView.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAjwGUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -156,11 +144,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4BAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T22:46:18.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormSettings.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettings.cs",
+              "RelativeDocumentMoniker": "Settings\\FormSettings.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettings.cs",
+              "RelativeToolTip": "Settings\\FormSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:42:44.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormBlueprintView.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintView.Designer.cs",
+              "RelativeDocumentMoniker": "Blueprints\\FormBlueprintView.Designer.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintView.Designer.cs",
+              "RelativeToolTip": "Blueprints\\FormBlueprintView.Designer.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAAAOoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T00:54:25.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "FormSettings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettings.cs",
+              "RelativeDocumentMoniker": "Settings\\FormSettings.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettings.cs [Design]",
+              "RelativeToolTip": "Settings\\FormSettings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:38:30.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormSettingsCameras.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Settings\\FormSettingsCameras.cs",
+              "RelativeDocumentMoniker": "Settings\\FormSettingsCameras.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Settings\\FormSettingsCameras.cs [Design]",
+              "RelativeToolTip": "..\\Settings\\FormSettingsCameras.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:43:13.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T02:24:13.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "FormBlueprintDesigner.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintDesigner.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintDesigner.cs",
               "RelativeDocumentMoniker": "Blueprints\\FormBlueprintDesigner.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintDesigner.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\FormBlueprintDesigner.cs",
               "RelativeToolTip": "Blueprints\\FormBlueprintDesigner.cs",
               "ViewState": "AgIAAKcAAAAAAAAAAAAAALAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -169,22 +230,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T23:17:14.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "BlueprintDesign.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\BlueprintDesign.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\BlueprintDesign.cs",
               "RelativeDocumentMoniker": "Blueprints\\BlueprintDesign.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\BlueprintDesign.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Blueprints\\BlueprintDesign.cs",
               "RelativeToolTip": "Blueprints\\BlueprintDesign.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -192,22 +242,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormBlueprintDesigner.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintDesigner.cs",
-              "RelativeDocumentMoniker": "Blueprints\\FormBlueprintDesigner.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintDesigner.cs [Design]",
-              "RelativeToolTip": "Blueprints\\FormBlueprintDesigner.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T22:07:27.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "DoorSensor.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\DoorSensor.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\DoorSensor.cs",
               "RelativeDocumentMoniker": "Sensors\\DoorSensor.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\DoorSensor.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\DoorSensor.cs",
               "RelativeToolTip": "Sensors\\DoorSensor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -215,34 +254,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormBlueprintView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.cs",
-              "RelativeDocumentMoniker": "Blueprints\\FormBlueprintView.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.cs [Design]",
-              "RelativeToolTip": "Blueprints\\FormBlueprintView.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T03:19:24.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAYwG8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T22:46:18.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "SensorScanner.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\SensorScanner.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\SensorScanner.cs",
               "RelativeDocumentMoniker": "Sensors\\SensorScanner.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\SensorScanner.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\SensorScanner.cs",
               "RelativeToolTip": "Sensors\\SensorScanner.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAqwBYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -250,27 +266,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Esp32Controller.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\Esp32Controller.cs",
+              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\Esp32Controller.cs",
               "RelativeDocumentMoniker": "Sensors\\Esp32Controller.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Sensors\\Esp32Controller.cs",
+              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\SecurityAppMain\\Sensors\\Esp32Controller.cs",
               "RelativeToolTip": "Sensors\\Esp32Controller.cs",
               "ViewState": "AgIAAFgBAAAAAAAAAADwv4ABAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T04:06:47.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormBlueprintView.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.Designer.cs",
-              "RelativeDocumentMoniker": "Blueprints\\FormBlueprintView.Designer.cs",
-              "ToolTip": "C:\\Users\\ZakRowton\\OneDrive - Concierge Benefit Services, LLC\\Desktop\\Security\\Blueprints\\FormBlueprintView.Designer.cs",
-              "RelativeToolTip": "Blueprints\\FormBlueprintView.Designer.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAiwFYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T00:54:25.794Z"
             }
           ]
         }

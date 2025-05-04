@@ -45,7 +45,8 @@ namespace Security
         private int panelTargetWidth = 250;             // <<< SET YOUR DESIRED EXPANDED WIDTH HERE
         private TimeSpan panelAnimationDuration = TimeSpan.FromMilliseconds(350); // Animation speed
         private bool isPanelExpanded = false;           // Track panel state
-        private int formBaseWidth = -1;                 // Stores the Form's width when panel is collapsed
+        private int formBaseWidth = -1;             // Stores the Form's width when panel IS collapsed
+        private int formTargetExpandedWidth = -1; // Stores the Form's width when panel IS expanded
         private int pictureBoxStartX = -1;
         #endregion
 
@@ -118,90 +119,98 @@ namespace Security
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("pictureBox1 Clicked.");
-            if (panelNav == null || panelAnimationTimer.Enabled || pictureBox1 == null || pictureBoxStartX < 0) // Check pictureBox1 init too
+            if (panelNav == null || panelAnimationTimer.Enabled || pictureBox1 == null || pictureBoxStartX < 0 || formBaseWidth <= 0) // Removed formTargetExpandedWidth check
             {
-                Console.WriteLine($"Animation trigger ignored: Panel null({panelNav == null}), Timer Enabled({panelAnimationTimer?.Enabled}), PicBox not ready({pictureBox1 == null || pictureBoxStartX < 0})");
+                Console.WriteLine($"Animation trigger ignored: Panel({panelNav == null}), Timer({panelAnimationTimer.Enabled}), PicBox({pictureBox1 == null || pictureBoxStartX < 0}), BaseWidth({formBaseWidth <= 0})");
                 return;
             }
 
-            // Calculate Panel Width Change dynamically
             int panelWidthChange = panelTargetWidth - panelStartWidth;
 
-            // Base width is the width when the panel IS collapsed.
-            // If currently expanded, calculate what the base width *was*.
-            // If currently collapsed, the current width *is* the base width.
+            // Update formBaseWidth based on the state *before* toggling
             if (isPanelExpanded)
             {
-                // Currently expanded, calculate base width before collapsing
+                // We are currently expanded, about to collapse. Update base width based on current size.
                 formBaseWidth = this.Width - panelWidthChange;
+                Console.WriteLine($"Recalculated form base width before collapse: {formBaseWidth}");
             }
             else
             {
-                // Currently collapsed, current width is the base width before expanding
+                // We are currently collapsed, about to expand. Update base width if needed (e.g., user resized while collapsed).
+                // Check Form1_Resize logic for this update. If Resize is correct, this might not be needed here.
+                // For safety, let's ensure it reflects current width if collapsed:
                 formBaseWidth = this.Width;
+                Console.WriteLine($"Using current width as form base width before expansion: {formBaseWidth}");
             }
 
-            Console.WriteLine($"Form base width for animation cycle: {formBaseWidth}");
+            // Safety check after potential recalculation
             if (formBaseWidth <= 0 && this.WindowState == FormWindowState.Normal)
             {
-                MessageBox.Show("Error: Cannot determine base width accurately.");
+                MessageBox.Show("Error: Base width became invalid before animation.");
                 return;
             }
 
             // Toggle the state for the *upcoming* animation
             isPanelExpanded = !isPanelExpanded;
-            Console.WriteLine($"Animation triggered. Expanding: {isPanelExpanded}");
+            Console.WriteLine($"Animation triggered. Expanding/Collapsing: {isPanelExpanded}"); // Updated log text
             panelAnimationStopwatch.Restart();
             panelAnimationTimer.Start();
             Console.WriteLine("Panel Animation Timer Started.");
         }
+
         private void PanelAnimationTimer_Tick(object sender, EventArgs e)
         {
-            if (panelNav == null || pictureBox1 == null || pictureBoxStartX < 0) // Ensure pictureBox is ready
+            if (panelNav == null || pictureBox1 == null || pictureBoxStartX < 0) { panelAnimationTimer.Stop(); return; }
+            if (formBaseWidth <= 0)
             {
-                panelAnimationTimer.Stop(); return;
-            }
-
-            // Base width check (mostly relevant if state changes occur mid-animation, less critical now)
-            if (formBaseWidth <= 0 && this.WindowState == FormWindowState.Normal)
-            {
-                Console.WriteLine("Warning: formBaseWidth invalid mid-animation.");
-                // Might need recovery logic, but Form1_Resize should handle state changes better.
-                // For now, we stop to prevent errors.
-                panelAnimationTimer.Stop(); return;
+                Console.WriteLine("Error: Invalid formBaseWidth during animation tick.");
+                panelAnimationTimer.Stop();
+                return;
             }
 
             TimeSpan elapsed = panelAnimationStopwatch.Elapsed;
             double progress = Math.Min(1.0, elapsed.TotalMilliseconds / panelAnimationDuration.TotalMilliseconds);
-            double easedProgress = 1 - Math.Pow(1 - progress, 3); // Apply easing
+            double easedProgress = 1 - Math.Pow(1 - progress, 3);
 
-            // --- Animate Panel Width ---
+            // --- Animate Panel Width (Same as before) ---
             int panelStartActualWidth = isPanelExpanded ? panelStartWidth : panelTargetWidth;
             int panelEndActualWidth = isPanelExpanded ? panelTargetWidth : panelStartWidth;
             int newPanelWidth = (int)(panelStartActualWidth + (panelEndActualWidth - panelStartActualWidth) * easedProgress);
             newPanelWidth = Math.Max(Math.Min(panelStartActualWidth, panelEndActualWidth), Math.Min(Math.Max(panelStartActualWidth, panelEndActualWidth), newPanelWidth));
             panelNav.Width = newPanelWidth;
 
-            // --- Animate PictureBox Position ---
-            int newPictureBoxLeft = newPanelWidth + pictureBoxStartX; // Position relative to panel's right edge
+            // --- Animate PictureBox Position (Same as before) ---
+            int newPictureBoxLeft = newPanelWidth + pictureBoxStartX;
             pictureBox1.Left = newPictureBoxLeft;
 
-            // --- Animate Form Width (Only When Expanding and if Normal State) ---
-            if (isPanelExpanded && this.WindowState == FormWindowState.Normal && formBaseWidth > 0)
+            // --- Animate Form Width (NOW FOR BOTH EXPAND AND COLLAPSE if Normal State) ---
+            if (this.WindowState == FormWindowState.Normal)
             {
                 int panelWidthChange = panelTargetWidth - panelStartWidth;
-                int formStartWidth = formBaseWidth; // Always starts from base when expanding
-                int formEndWidth = formBaseWidth + panelWidthChange; // Ends at expanded width
+                int formStartWidth, formEndWidth;
+
+                if (isPanelExpanded) // Expanding
+                {
+                    formStartWidth = formBaseWidth;
+                    formEndWidth = formBaseWidth + panelWidthChange;
+                }
+                else // Collapsing
+                {
+                    // Start from the current expanded width (base + change)
+                    formStartWidth = formBaseWidth + panelWidthChange;
+                    // End at the base width
+                    formEndWidth = formBaseWidth;
+                }
+
                 int newFormWidth = (int)(formStartWidth + (formEndWidth - formStartWidth) * easedProgress);
-                // Clamp form width
-                newFormWidth = Math.Max(formStartWidth, Math.Min(formEndWidth, newFormWidth)); // Clamp between base and expanded
+                // Clamp form width between the start and end points for this animation direction
+                newFormWidth = Math.Max(Math.Min(formStartWidth, formEndWidth), Math.Min(Math.Max(formStartWidth, formEndWidth), newFormWidth));
 
                 if (this.Width != newFormWidth)
                 {
                     this.Width = newFormWidth;
                 }
             }
-            // --- NO Form Width animation when collapsing ---
 
             // --- Finish Animation ---
             if (progress >= 1.0)
@@ -209,45 +218,60 @@ namespace Security
                 panelAnimationTimer.Stop();
                 panelAnimationStopwatch.Reset();
 
-                // Set final states explicitly
+                // Set final panel and picturebox states
                 panelNav.Width = panelEndActualWidth;
-                pictureBox1.Left = panelEndActualWidth + pictureBoxStartX; // Final PicBox position
+                pictureBox1.Left = panelEndActualWidth + pictureBoxStartX;
 
-                // Set final form width ONLY if expanding AND normal state
-                if (isPanelExpanded && this.WindowState == FormWindowState.Normal && formBaseWidth > 0)
+                // Set final form width based on the new state (if Normal)
+                if (this.WindowState == FormWindowState.Normal)
                 {
                     int panelWidthChange = panelTargetWidth - panelStartWidth;
-                    this.Width = formBaseWidth + panelWidthChange;
+                    int finalFormWidth = isPanelExpanded ? formBaseWidth + panelWidthChange : formBaseWidth;
+                    this.Width = finalFormWidth;
+                    Console.WriteLine($"Animation finished. isPanelExpanded={isPanelExpanded}. Form Width set to: {finalFormWidth}");
                 }
-                // --- DO NOT set form width when collapsing finishes ---
 
-                // Update button image if applicable
+                // Update button image
                 if (pictureBox1 != null) { try { pictureBox1.Image = isPanelExpanded ? Properties.Resources.Menu_Hovered : Properties.Resources.Menu; } catch { /* ignore */ } }
 
                 panelNav.Invalidate();
-                pictureBox1.Invalidate(); // Redraw picture box too
+                pictureBox1.Invalidate();
                 Console.WriteLine("Panel Animation Timer Stopped (Finished).");
             }
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if (panelNav != null && this.WindowState != FormWindowState.Minimized && pictureBox1 != null && pictureBoxStartX >= 0)
+            if (this.WindowState == FormWindowState.Minimized || panelNav == null || pictureBox1 == null || pictureBoxStartX < 0)
             {
-                // Recalculate base width (width when panel is collapsed)
-                int panelWidthChange = panelTargetWidth - panelStartWidth;
-                formBaseWidth = this.Width - (isPanelExpanded ? panelWidthChange : 0);
-                Console.WriteLine($"Form base width updated on resize ({this.WindowState}): {formBaseWidth}");
-
-                // Reposition picturebox instantly on resize to match current panel state
-                int currentPanelWidth = isPanelExpanded ? panelTargetWidth : panelStartWidth;
-                // Handle edge case where animation might be running during resize
-                if (panelAnimationTimer.Enabled)
-                {
-                    currentPanelWidth = panelNav.Width; // Use animating width
-                }
-                pictureBox1.Left = currentPanelWidth + pictureBoxStartX;
+                return; // Ignore on minimize or if controls not ready
             }
+
+            int panelWidthChange = panelTargetWidth - panelStartWidth;
+
+            // Update base width based on the NEW form width and CURRENT panel state
+            if (isPanelExpanded && !panelAnimationTimer.Enabled) // Panel is fully expanded
+            {
+                // The current width is the expanded width, calculate the base width from it
+                formBaseWidth = this.Width - panelWidthChange;
+                Console.WriteLine($"Form base width updated on resize (Panel Expanded): {formBaseWidth}");
+            }
+            else if (!isPanelExpanded && !panelAnimationTimer.Enabled) // Panel is fully collapsed
+            {
+                // The current width IS the new base width
+                formBaseWidth = this.Width;
+                Console.WriteLine($"Form base width updated on resize (Panel Collapsed): {formBaseWidth}");
+            }
+            // Else: If animating, don't update base width here, let the click handler manage it
+
+            // Always reposition picturebox instantly based on current panel width
+            int currentPanelWidth = panelNav.Width;
+            if (!panelAnimationTimer.Enabled) // If not animating, use the definite state width
+            {
+                currentPanelWidth = isPanelExpanded ? panelTargetWidth : panelStartWidth;
+            }
+            pictureBox1.Left = currentPanelWidth + pictureBoxStartX;
+            Console.WriteLine($"Form resized ({this.WindowState}). PictureBox Left: {pictureBox1.Left}");
         }
         // --- End Form Resize Event Handler ---
 
@@ -264,24 +288,28 @@ namespace Security
             ScanForSensors();
             // --- Initialize Base Width for Animation ---
             // --- Initialize Base Width for Animation ---
-            if (formBaseWidth <= 0)
+            // --- Initialize Base and Target Expanded Widths ---
+            if (formBaseWidth <= 0) // Only on first load
             {
                 formBaseWidth = this.Width; // Initial width IS the base width (panel starts collapsed)
                 Console.WriteLine($"Form base width captured on load: {formBaseWidth}");
             }
+            // --- formTargetExpandedWidth removed ---
 
             // --- Capture pictureBox1 Initial Position ---
             if (pictureBox1 != null)
             {
-                // Assumes pictureBox1 starts positioned correctly relative to the *collapsed* panel edge (X=0)
                 pictureBoxStartX = pictureBox1.Left;
                 Console.WriteLine($"pictureBox1 initial Left position captured: {pictureBoxStartX}");
-                if (pictureBoxStartX < 0) pictureBoxStartX = 5; // Fallback padding if calculation is odd
+                if (pictureBoxStartX < 0) pictureBoxStartX = 5;
             }
             else
             {
-                Console.WriteLine("Warning: pictureBox1 is null, cannot capture start position.");
+                Console.WriteLine("Warning: pictureBox1 is null.");
             }
+
+            // --- Initialize ESP32 Manager and Sensor Monitoring ---
+            _espManager = new Esp32Manager();
 
             // --- Initialize ESP32 Manager and Sensor Monitoring ---
             _espManager = new Esp32Manager(); // Instantiate the manager field
@@ -657,6 +685,11 @@ namespace Security
         private void buttonSetting_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(FormSettings);
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     } // End Form1 Class
 } // End Namespace
