@@ -1,4 +1,5 @@
 ﻿using Security.Blueprints;
+using Security.Sensors;
 using Security.SmartThings;
 using System;
 using System.Collections.Generic;
@@ -94,12 +95,118 @@ namespace Security
 
                 // Add the Control to the Form's controls collection
                 this.Controls.Add(pbNewCam);
-                pbNewCam.BringToFront();
+                pbNewCam.SendToBack();
                 Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
             }
 
-            //labelFreezerTemp.Text = Fridge.FreezerTemperatureF.ToString() + " F";
-            //labelFridgeTemp.Text = Fridge.FridgeTemperatureF.ToString() + " F";
+            // Door Sensors
+            foreach (SensorControl control in Design.SensorControls)
+            {
+                if (control == null) // Check if the entry itself is null
+                {
+                    Console.WriteLine("Null CameraControl entry found in design. Skipping.");
+                    continue;
+                }
+
+                // Get the associated Camera data - essential for Tag and maybe Name
+                DoorSensor sensorData = control.DoorSensor;
+                if (sensorData == null)
+                {
+                    // Attempt to find based on name if Camera reference is missing? (Optional fallback)
+                    // camData = Storage.Cameras.FirstOrDefault(c => c.Name == control.Name);
+                    // if (camData == null)
+                    //{
+                    Console.WriteLine($"Warning: DoorSensorControl '{control.Name ?? "Unnamed"}' has no associated Sensor data. Skipping.");
+                    continue; // Skip if we can't link to a Camera object
+                    //}
+                }
+
+                PictureBox pbNewCam = new PictureBox();
+                try
+                {
+                    // Consider making the resource name configurable if needed
+                    pbNewCam.Image = Properties.Resources.door_closed1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading door resource: {ex.Message}", "Resource Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Continue without image? Or skip this control?
+                }
+
+                // Use Camera's name for consistency, ensure uniqueness if needed
+                pbNewCam.Name = "buttonDoorSensor" + sensorData.SensorName?.Replace(" ", "") ?? Guid.NewGuid().ToString(); // Use GUID if name is bad
+                pbNewCam.Tag = sensorData; // Store the actual CAMERA object in the Tag
+                pbNewCam.Size = new Size(69, 53);
+                pbNewCam.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbNewCam.BackColor = Color.Transparent;
+
+                // Use the Position property from the CameraControl object
+                pbNewCam.Location = control.Position;
+                // Optional: Add boundary check here too, in case saved position is outside current form bounds
+                AdjustLocationToBounds(pbNewCam);
+
+                pbNewCam.Cursor = Cursors.Hand;
+
+                // Add the Control to the Form's controls collection
+                this.Controls.Add(pbNewCam);
+                pbNewCam.SendToBack();
+                Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
+            }
+
+            // Window Sensors
+            foreach (SensorControl control in Design.SensorControls)
+            {
+                if (control == null) // Check if the entry itself is null
+                {
+                    Console.WriteLine("Null CameraControl entry found in design. Skipping.");
+                    continue;
+                }
+
+                // Get the associated Camera data - essential for Tag and maybe Name
+                WindowSensor sensorData = control.WindowSensor;
+                if (sensorData == null)
+                {
+                    // Attempt to find based on name if Camera reference is missing? (Optional fallback)
+                    // camData = Storage.Cameras.FirstOrDefault(c => c.Name == control.Name);
+                    // if (camData == null)
+                    //{
+                    Console.WriteLine($"Warning: WindowSensorControl '{control.Name ?? "Unnamed"}' has no associated Sensor data. Skipping.");
+                    continue; // Skip if we can't link to a Camera object
+                    //}
+                }
+
+                PictureBox pbNewCam = new PictureBox();
+                try
+                {
+                    // Consider making the resource name configurable if needed
+                    pbNewCam.Image = Properties.Resources.Window_Sensor;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading window image resource: {ex.Message}", "Resource Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Continue without image? Or skip this control?
+                }
+
+                // Use Camera's name for consistency, ensure uniqueness if needed
+                pbNewCam.Name = "buttonWindowSensor" + sensorData.SensorName?.Replace(" ", "") ?? Guid.NewGuid().ToString(); // Use GUID if name is bad
+                pbNewCam.Tag = sensorData; // Store the actual CAMERA object in the Tag
+                pbNewCam.Size = new Size(69, 53);
+                pbNewCam.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbNewCam.BackColor = Color.Transparent;
+
+                // Use the Position property from the CameraControl object
+                pbNewCam.Location = control.Position;
+                // Optional: Add boundary check here too, in case saved position is outside current form bounds
+                AdjustLocationToBounds(pbNewCam);
+
+                pbNewCam.Cursor = Cursors.Hand;
+
+                // Add the Control to the Form's controls collection
+                this.Controls.Add(pbNewCam);
+                pbNewCam.SendToBack();
+                Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
+            }
+
         }
 
         string myPat = "9415ac5e-806f-4dd6-9c40-563e31f9e596"; // Load this securely!

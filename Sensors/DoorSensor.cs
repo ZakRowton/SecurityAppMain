@@ -10,7 +10,7 @@ namespace Security.Sensors
     {
         public String SensorName { get; set; }
         public String IPAddress { get; set; }
-        public String RoomID { get; set; } = "";
+        public Room Room { get; set; }
         public DoorSensor() { }
         public DoorSensor(string sensorName, string ipAddress)
         {

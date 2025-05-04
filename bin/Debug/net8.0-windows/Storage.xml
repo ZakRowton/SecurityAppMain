@@ -8,13 +8,24 @@
       <WyzePassword>rags1206</WyzePassword>
       <PlaySound>false</PlaySound>
       <Visible>true</Visible>
+      <Room>
+        <Name>Front Yard</Name>
+      </Room>
     </Camera>
   </Cameras>
   <DoorSensors>
     <DoorSensor>
       <SensorName>Available Sensor 1</SensorName>
       <IPAddress>192.168.0.101</IPAddress>
-      <RoomID>Living Room</RoomID>
     </DoorSensor>
   </DoorSensors>
+  <WindowSensors />
+  <Rooms>
+    <Room>
+      <Name>Living Room</Name>
+    </Room>
+    <Room>
+      <Name>Front Yard</Name>
+    </Room>
+  </Rooms>
 </Storage>

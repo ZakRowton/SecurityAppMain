@@ -4,8 +4,8 @@
   <CameraControls>
     <CameraControl>
       <Position>
-        <X>734</X>
-        <Y>756</Y>
+        <X>735</X>
+        <Y>771</Y>
       </Position>
       <Name>Front Porch Camera</Name>
       <Camera>
@@ -21,11 +21,6 @@
   <SensorControls>
     <SensorControl>
       <Name>Available Sensor 1</Name>
-      <Sensor>
-        <SensorName>Available Sensor 1</SensorName>
-        <IPAddress>192.168.0.101</IPAddress>
-        <RoomID>Living Room</RoomID>
-      </Sensor>
       <Position>
         <X>712</X>
         <Y>595</Y>
@@ -33,11 +28,6 @@
     </SensorControl>
     <SensorControl>
       <Name>Available Sensor 1</Name>
-      <Sensor>
-        <SensorName>Available Sensor 1</SensorName>
-        <IPAddress>192.168.0.101</IPAddress>
-        <RoomID>Living Room</RoomID>
-      </Sensor>
       <Position>
         <X>618</X>
         <Y>521</Y>
@@ -45,14 +35,33 @@
     </SensorControl>
     <SensorControl>
       <Name>Available Sensor 1</Name>
-      <Sensor>
-        <SensorName>Available Sensor 1</SensorName>
-        <IPAddress>192.168.0.101</IPAddress>
-        <RoomID>Living Room</RoomID>
-      </Sensor>
       <Position>
         <X>615</X>
         <Y>443</Y>
+      </Position>
+    </SensorControl>
+    <SensorControl>
+      <Name>Available Sensor 1</Name>
+      <DoorSensor>
+        <SensorName>Available Sensor 1</SensorName>
+        <IPAddress>192.168.0.101</IPAddress>
+        <RoomID>Living Room</RoomID>
+      </DoorSensor>
+      <Position>
+        <X>931</X>
+        <Y>716</Y>
+      </Position>
+    </SensorControl>
+    <SensorControl>
+      <Name>Available Sensor 1</Name>
+      <DoorSensor>
+        <SensorName>Available Sensor 1</SensorName>
+        <IPAddress>192.168.0.101</IPAddress>
+        <RoomID>Living Room</RoomID>
+      </DoorSensor>
+      <Position>
+        <X>931</X>
+        <Y>716</Y>
       </Position>
     </SensorControl>
   </SensorControls>

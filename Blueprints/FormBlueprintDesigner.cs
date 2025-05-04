@@ -59,6 +59,7 @@ namespace Security
 
             Console.WriteLine($"Loading {Design.CameraControls.Count} controls from design...");
 
+            // Cameras
             foreach (CameraControl control in Design.CameraControls)
             {
                 if (control == null) // Check if the entry itself is null
@@ -117,6 +118,126 @@ namespace Security
                 pbNewCam.BringToFront();
                 Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
             }
+
+            // Door Sensors
+            foreach (SensorControl control in Design.SensorControls)
+            {
+                if (control == null) // Check if the entry itself is null
+                {
+                    Console.WriteLine("Null CameraControl entry found in design. Skipping.");
+                    continue;
+                }
+
+                // Get the associated Camera data - essential for Tag and maybe Name
+                DoorSensor sensorData = control.DoorSensor;
+                if (sensorData == null)
+                {
+                    // Attempt to find based on name if Camera reference is missing? (Optional fallback)
+                    // camData = Storage.Cameras.FirstOrDefault(c => c.Name == control.Name);
+                    // if (camData == null)
+                    //{
+                    Console.WriteLine($"Warning: DoorSensorControl '{control.Name ?? "Unnamed"}' has no associated Sensor data. Skipping.");
+                    continue; // Skip if we can't link to a Camera object
+                    //}
+                }
+
+                PictureBox pbNewCam = new PictureBox();
+                try
+                {
+                    // Consider making the resource name configurable if needed
+                    pbNewCam.Image = Properties.Resources.door_closed1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading door resource: {ex.Message}", "Resource Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Continue without image? Or skip this control?
+                }
+
+                // Use Camera's name for consistency, ensure uniqueness if needed
+                pbNewCam.Name = "buttonDoorSensor" + sensorData.SensorName?.Replace(" ", "") ?? Guid.NewGuid().ToString(); // Use GUID if name is bad
+                pbNewCam.Tag = sensorData; // Store the actual CAMERA object in the Tag
+                pbNewCam.Size = new Size(69, 53);
+                pbNewCam.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbNewCam.BackColor = Color.Transparent;
+
+                // --- FIX: Use the saved position directly ---
+                // Use the Position property from the CameraControl object
+                pbNewCam.Location = control.Position;
+                // Optional: Add boundary check here too, in case saved position is outside current form bounds
+                AdjustLocationToBounds(pbNewCam);
+                // --- End FIX ---
+
+                // Attach drag handlers
+                pbNewCam.MouseDown += PbSensor_MouseDown;
+                pbNewCam.MouseMove += PbSensor_MouseMove;
+                pbNewCam.MouseUp += PbSensor_MouseUp;
+                pbNewCam.Cursor = Cursors.Hand;
+
+                // Add the Control to the Form's controls collection
+                this.Controls.Add(pbNewCam);
+                pbNewCam.BringToFront();
+                Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
+            }
+
+            // Window Sensors
+            foreach (SensorControl control in Design.SensorControls)
+            {
+                if (control == null) // Check if the entry itself is null
+                {
+                    Console.WriteLine("Null CameraControl entry found in design. Skipping.");
+                    continue;
+                }
+
+                // Get the associated Camera data - essential for Tag and maybe Name
+                WindowSensor sensorData = control.WindowSensor;
+                if (sensorData == null)
+                {
+                    // Attempt to find based on name if Camera reference is missing? (Optional fallback)
+                    // camData = Storage.Cameras.FirstOrDefault(c => c.Name == control.Name);
+                    // if (camData == null)
+                    //{
+                    Console.WriteLine($"Warning: WindowSensorControl '{control.Name ?? "Unnamed"}' has no associated Sensor data. Skipping.");
+                    continue; // Skip if we can't link to a Camera object
+                    //}
+                }
+
+                PictureBox pbNewCam = new PictureBox();
+                try
+                {
+                    // Consider making the resource name configurable if needed
+                    pbNewCam.Image = Properties.Resources.Window_Sensor;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading window image resource: {ex.Message}", "Resource Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Continue without image? Or skip this control?
+                }
+
+                // Use Camera's name for consistency, ensure uniqueness if needed
+                pbNewCam.Name = "buttonWindowSensor" + sensorData.SensorName?.Replace(" ", "") ?? Guid.NewGuid().ToString(); // Use GUID if name is bad
+                pbNewCam.Tag = sensorData; // Store the actual CAMERA object in the Tag
+                pbNewCam.Size = new Size(69, 53);
+                pbNewCam.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbNewCam.BackColor = Color.Transparent;
+
+                // --- FIX: Use the saved position directly ---
+                // Use the Position property from the CameraControl object
+                pbNewCam.Location = control.Position;
+                // Optional: Add boundary check here too, in case saved position is outside current form bounds
+                AdjustLocationToBounds(pbNewCam);
+                // --- End FIX ---
+
+                // Attach drag handlers
+                pbNewCam.MouseDown += PbSensor_MouseDown;
+                pbNewCam.MouseMove += PbSensor_MouseMove;
+                pbNewCam.MouseUp += PbSensor_MouseUp;
+                pbNewCam.Cursor = Cursors.Hand;
+
+                // Add the Control to the Form's controls collection
+                this.Controls.Add(pbNewCam);
+                pbNewCam.BringToFront();
+                Console.WriteLine($"Loaded control '{pbNewCam.Name}' at {pbNewCam.Location}");
+            }
         }
 
         // Helper method to adjust location if it's outside bounds (used in Load and Move)
@@ -149,7 +270,7 @@ namespace Security
         private void buttonNewSensor_Click(object sender, EventArgs e)
         {
             // 1. Get selected camera name
-            string selectedSensorName = comboBoxSensors.Text;
+            string selectedSensorName = comboBoxSensors.Text.Replace(" - Door", "").Replace(" - Window", "");
             if (string.IsNullOrWhiteSpace(selectedSensorName))
             {
                 MessageBox.Show("Please select a sensor from the list.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -313,7 +434,7 @@ namespace Security
                     DoorSensor availableSensor = new DoorSensor();
                     availableSensor.SensorName = "Available Sensor " + sensorCt;
                     availableSensor.IPAddress = onlineDevice.ToString();
-                    availableSensor.RoomID = "NONE";
+                    availableSensor.Room = null;
                     comboBoxSensors.Items.Add(availableSensor.SensorName);
                     AvailableDevices.Add(availableSensor);
                     sensorCt++;
@@ -334,9 +455,11 @@ namespace Security
 
         private void FormBlueprintDesigner_Load(object sender, EventArgs e)
         {
-            ScanForSensors();
+            foreach (DoorSensor sensor in Storage.DoorSensors)
+                comboBoxSensors.Items.Add(sensor.SensorName + " - Door");
+            foreach (WindowSensor sensor in Storage.WindowSensors)
+                comboBoxSensors.Items.Add(sensor.SensorName + " - Window");
 
-            // Populate ComboBox
             if (Storage?.Cameras != null)
             {
                 foreach (Camera camera in Storage.Cameras)
@@ -356,7 +479,6 @@ namespace Security
                 MessageBox.Show("Camera storage is not available.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            // Load controls AFTER ComboBox is populated but before form is shown
             LoadCurrentDesignControls();
         }
 
@@ -468,7 +590,7 @@ namespace Security
                     if (currentDragControl.Tag is DoorSensor cam)
                     {
                         // Find the CameraControl in the Design list that corresponds to this Camera
-                        SensorControl existingCtrl = Design.SensorControls.FirstOrDefault(cc => cc.Sensor == cam);
+                        SensorControl existingCtrl = Design.SensorControls.FirstOrDefault(cc => cc.DoorSensor == cam);
                         if (existingCtrl != null)
                         {
                             existingCtrl.Position = currentDragControl.Location; // Update position in the Design object
@@ -479,6 +601,22 @@ namespace Security
                             // This scenario (dragged control not having corresponding CameraControl)
                             // shouldn't happen if loading/adding is correct, but good to note.
                             Console.WriteLine($"Warning: Could not find CameraControl in Design for Camera '{cam.SensorName}' during MouseUp.");
+                        }
+                    }
+                    if (currentDragControl.Tag is WindowSensor window)
+                    {
+                        // Find the CameraControl in the Design list that corresponds to this Camera
+                        SensorControl existingCtrl = Design.SensorControls.FirstOrDefault(cc => cc.WindowSensor == window);
+                        if (existingCtrl != null)
+                        {
+                            existingCtrl.Position = currentDragControl.Location; // Update position in the Design object
+                            Console.WriteLine($"Updated Design: Camera '{window.SensorName}' moved to {existingCtrl.Position}");
+                        }
+                        else
+                        {
+                            // This scenario (dragged control not having corresponding CameraControl)
+                            // shouldn't happen if loading/adding is correct, but good to note.
+                            Console.WriteLine($"Warning: Could not find CameraControl in Design for Camera '{window.SensorName}' during MouseUp.");
                         }
                     }
                     // --- End Update ---
@@ -516,7 +654,19 @@ namespace Security
                     // Create a NEW CameraControl entry reflecting the UI state
                     SensorControl sensorCtrl = new SensorControl();
                     sensorCtrl.Name = tagSensor.SensorName; // Use the Camera's name
-                    sensorCtrl.Sensor = (DoorSensor)pb.Tag; // Link to the Camera object
+                    sensorCtrl.DoorSensor = (DoorSensor)pb.Tag; // Link to the Camera object
+                    sensorCtrl.Position = pb.Location; // Get the CURRENT location from the PictureBox
+
+                    Design.SensorControls.Add(sensorCtrl); // Add the current state to the list
+                }
+
+                // Window Sensors
+                if (pb.Tag is WindowSensor tagSensor2) // Check if the tag holds a Camera object
+                {
+                    // Create a NEW CameraControl entry reflecting the UI state
+                    SensorControl sensorCtrl = new SensorControl();
+                    sensorCtrl.Name = tagSensor2.SensorName; // Use the Camera's name
+                    sensorCtrl.WindowSensor = (WindowSensor)pb.Tag; // Link to the Camera object
                     sensorCtrl.Position = pb.Location; // Get the CURRENT location from the PictureBox
 
                     Design.SensorControls.Add(sensorCtrl); // Add the current state to the list

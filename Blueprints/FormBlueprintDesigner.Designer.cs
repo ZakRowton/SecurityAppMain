@@ -40,9 +40,9 @@
             // 
             // pbSave
             // 
-            pbSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pbSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbSave.Image = Properties.Resources.save;
-            pbSave.Location = new Point(1156, 614);
+            pbSave.Location = new Point(1147, 6);
             pbSave.Name = "pbSave";
             pbSave.Size = new Size(69, 53);
             pbSave.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -55,6 +55,7 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(55, 55, 55);
             panel1.Controls.Add(comboBoxSensors);
+            panel1.Controls.Add(pbSave);
             panel1.Controls.Add(buttonNewSensor);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(buttonAddCam);
@@ -67,16 +68,16 @@
             // 
             comboBoxSensors.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxSensors.FormattingEnabled = true;
-            comboBoxSensors.Location = new Point(444, 17);
+            comboBoxSensors.Location = new Point(400, 16);
             comboBoxSensors.Name = "comboBoxSensors";
             comboBoxSensors.Size = new Size(251, 29);
             comboBoxSensors.TabIndex = 3;
             // 
             // buttonNewSensor
             // 
-            buttonNewSensor.Location = new Point(701, 17);
+            buttonNewSensor.Location = new Point(657, 16);
             buttonNewSensor.Name = "buttonNewSensor";
-            buttonNewSensor.Size = new Size(134, 30);
+            buttonNewSensor.Size = new Size(97, 30);
             buttonNewSensor.TabIndex = 2;
             buttonNewSensor.Text = "New Sensor";
             buttonNewSensor.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             // 
             buttonAddCam.Location = new Point(281, 16);
             buttonAddCam.Name = "buttonAddCam";
-            buttonAddCam.Size = new Size(134, 30);
+            buttonAddCam.Size = new Size(97, 30);
             buttonAddCam.TabIndex = 0;
             buttonAddCam.Text = "New Camera";
             buttonAddCam.UseVisualStyleBackColor = true;
@@ -111,7 +112,6 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1237, 679);
             Controls.Add(panel1);
-            Controls.Add(pbSave);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormBlueprintDesigner";

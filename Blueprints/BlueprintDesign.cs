@@ -132,7 +132,8 @@ namespace Security.Blueprints
         // Apply same pattern if Sensor object is complex
         public string SensorIdentifier { get; set; }
 
-         public DoorSensor Sensor { get; set; }
+        public DoorSensor DoorSensor { get; set; }
+        public WindowSensor WindowSensor { get; set; }
 
         public Point Position { get; set; }
         public SensorControl() { }

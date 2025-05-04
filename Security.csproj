@@ -19,6 +19,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Settings\FormSettingsSensors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Settings\FormSettingsRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -56,10 +62,6 @@
     <None Update="libvlc\win-x64\libvlccore.lib">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Camera\" />
   </ItemGroup>
 
 </Project>

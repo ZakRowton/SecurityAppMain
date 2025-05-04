@@ -12,15 +12,27 @@ namespace Security.Settings
 {
     public partial class FormSettings : Form
     {
+        private Storage Storage { get; set; }
+
         Form activeChildForm = null;
-        FormSettingsCameras FormCameras = new FormSettingsCameras();
-        public FormSettings()
+        FormSettingsCameras FormCameras = null;
+        FormSettingsRooms FormRooms = null;
+        FormSettingsSensors FormSensors = null;
+
+        public FormSettings(Storage storage)
         {
+            Storage = storage;
+            FormCameras = new FormSettingsCameras(Storage);
+            FormRooms = new FormSettingsRooms(Storage);
+            FormSensors = new FormSettingsSensors(Storage);
             InitializeComponent();
         }
 
         private void FormSettings_Load(object sender, EventArgs e)
         {
+            FormCameras = new FormSettingsCameras(Storage);
+            FormRooms = new FormSettingsRooms(Storage);
+            FormSensors = new FormSettingsSensors(Storage);
             LoadFormIntoPanel(FormCameras);
         }
 
@@ -38,6 +50,24 @@ namespace Security.Settings
             panelSettings.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void buttonRooms_Click(object sender, EventArgs e)
+        {
+            FormRooms = new FormSettingsRooms(Storage);
+            LoadFormIntoPanel(FormRooms);
+        }
+
+        private void btnNavCameras_Click(object sender, EventArgs e)
+        {
+            FormCameras = new FormSettingsCameras(Storage);
+            LoadFormIntoPanel(FormCameras);
+        }
+
+        private void buttonSensors_Click(object sender, EventArgs e)
+        {
+            FormSensors = new FormSettingsSensors(Storage);
+            LoadFormIntoPanel(FormSensors);
         }
     }
 }

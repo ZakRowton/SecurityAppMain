@@ -34,6 +34,7 @@ namespace Security
             pbExit = new PictureBox();
             vlcControl1 = new VlcControl();
             panelSmartThings = new Panel();
+            labelStatusMessage = new Label();
             buttonFridgeTempUp = new Button();
             buttonFridgeTempDown = new Button();
             buttonFreezerTempUp = new Button();
@@ -44,7 +45,6 @@ namespace Security
             label1 = new Label();
             pictureBox1 = new PictureBox();
             pbSmartThings = new PictureBox();
-            labelStatusMessage = new Label();
             panelCam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vlcControl1).BeginInit();
@@ -55,6 +55,7 @@ namespace Security
             // 
             // panelCam
             // 
+            panelCam.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelCam.Controls.Add(pbExit);
             panelCam.Controls.Add(vlcControl1);
             panelCam.Location = new Point(127, 66);
@@ -65,6 +66,7 @@ namespace Security
             // 
             // pbExit
             // 
+            pbExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbExit.Image = Properties.Resources.exit;
             pbExit.Location = new Point(959, 15);
             pbExit.Name = "pbExit";
@@ -76,8 +78,8 @@ namespace Security
             // 
             // vlcControl1
             // 
+            vlcControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             vlcControl1.BackColor = Color.Black;
-            vlcControl1.Dock = DockStyle.Fill;
             vlcControl1.Location = new Point(0, 0);
             vlcControl1.Name = "vlcControl1";
             vlcControl1.Size = new Size(1025, 529);
@@ -89,6 +91,7 @@ namespace Security
             // 
             // panelSmartThings
             // 
+            panelSmartThings.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelSmartThings.Controls.Add(labelStatusMessage);
             panelSmartThings.Controls.Add(buttonFridgeTempUp);
             panelSmartThings.Controls.Add(buttonFridgeTempDown);
@@ -104,6 +107,18 @@ namespace Security
             panelSmartThings.Size = new Size(1025, 529);
             panelSmartThings.TabIndex = 2;
             panelSmartThings.Visible = false;
+            // 
+            // labelStatusMessage
+            // 
+            labelStatusMessage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            labelStatusMessage.AutoSize = true;
+            labelStatusMessage.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelStatusMessage.ForeColor = SystemColors.ButtonHighlight;
+            labelStatusMessage.Location = new Point(54, 484);
+            labelStatusMessage.Name = "labelStatusMessage";
+            labelStatusMessage.Size = new Size(135, 25);
+            labelStatusMessage.TabIndex = 10;
+            labelStatusMessage.Text = "Freezer Temp:";
             // 
             // buttonFridgeTempUp
             // 
@@ -191,6 +206,7 @@ namespace Security
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.exit;
             pictureBox1.Location = new Point(973, 15);
             pictureBox1.Name = "pictureBox1";
@@ -201,6 +217,7 @@ namespace Security
             // 
             // pbSmartThings
             // 
+            pbSmartThings.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pbSmartThings.Image = Properties.Resources.SmartThings;
             pbSmartThings.Location = new Point(12, 615);
             pbSmartThings.Name = "pbSmartThings";
@@ -210,29 +227,19 @@ namespace Security
             pbSmartThings.TabStop = false;
             pbSmartThings.Click += pbSmartThings_Click;
             // 
-            // labelStatusMessage
-            // 
-            labelStatusMessage.AutoSize = true;
-            labelStatusMessage.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelStatusMessage.ForeColor = SystemColors.ButtonHighlight;
-            labelStatusMessage.Location = new Point(54, 484);
-            labelStatusMessage.Name = "labelStatusMessage";
-            labelStatusMessage.Size = new Size(135, 25);
-            labelStatusMessage.TabIndex = 10;
-            labelStatusMessage.Text = "Freezer Temp:";
-            // 
             // FormBlueprintView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(65, 65, 65);
-            ClientSize = new Size(1253, 679);
-            Controls.Add(pbSmartThings);
-            Controls.Add(panelSmartThings);
-            Controls.Add(panelCam);
-            FormBorderStyle = FormBorderStyle.None;
             BackgroundImage = Properties.Resources.blueprint2;
             BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1253, 679);
+            Controls.Add(pbSmartThings);
+            Controls.Add(panelCam);
+            Controls.Add(panelSmartThings);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormBlueprintView";
             Text = "FormBlueprintView";
             Load += FormBlueprintView_Load;

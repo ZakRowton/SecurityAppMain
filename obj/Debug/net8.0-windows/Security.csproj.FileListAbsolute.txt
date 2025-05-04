@@ -69,7 +69,6 @@ C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\S
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.csproj.AssemblyReference.cache
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.FormBlueprintDesigner.resources
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.FormBlueprintView.resources
-C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Form1.resources
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Properties.Resources.resources
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Settings.FormSettings.resources
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Settings.FormSettingsCameras.resources
@@ -85,3 +84,6 @@ C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\S
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.pdb
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.genruntimeconfig.cache
 C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\ref\Security.dll
+C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Settings.FormSettingsRooms.resources
+C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.FormMain.resources
+C:\Users\ZakRowton\OneDrive - Concierge Benefit Services, LLC\Desktop\Security\SecurityAppMain\obj\Debug\net8.0-windows\Security.Settings.FormSettingsSensors.resources
